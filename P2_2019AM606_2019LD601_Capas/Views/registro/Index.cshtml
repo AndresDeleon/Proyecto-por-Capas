@@ -1,0 +1,90 @@
+﻿@model IEnumerable<P2_2019AM606_2019LD601_Capas_Entidades.CasosReportados>
+
+
+
+<div class="container">
+    <h2>Registro de Covid</h2>
+
+    <form action="/" method="post">
+        <label for="dept">Departamentos</label>
+        <div class="col-md-4" name="dep">
+            @Html.DropDownList("DepartamentoSeleccionado", (IEnumerable<SelectListItem>)ViewBag.ComboDeptValores, "Seleccionar un departamento...")
+        </div>
+        <br />
+        <label for="gen">Genero</label>
+        <div class="col-md-4" name="gen">
+            @Html.DropDownList("GeneroSeleccionado", (IEnumerable<SelectListItem>)ViewBag.ComboGenValores, "Seleccionar un genero...")
+        </div>
+        <br />
+        <label for="cc">Casos Confirmados</label>
+        @Html.TextBox("Conf", "", new { @class = "form-control col-md-4" })
+        <label for="cr">Casos Recuperados</label>
+        @Html.TextBox("Recup", "", new { @class = "form-control col-md-4" })
+        <label for="cf">Casos Fallecidos</label>
+        @Html.TextBox("Falle", "", new { @class = "form-control col-md-4" })
+        <br />
+        <br />
+
+        <div class="col-md-4">
+            <input type="submit" name="response" value="Guardar Registro" formaction=@Url.Action("guardarRegistro") formmethod="post" class="btn btn-success" />
+        </div>
+
+        <br />
+        <br />
+    </form>
+
+    <table class="table" id="table_id">
+        <thead>
+            <tr>
+
+                <th>
+                    Departamentos
+                </th>
+                <th>
+                    Genero
+                </th>
+                <th>
+                    Confirmados
+                </th>
+                <th>
+                    Recuperados
+                </th>
+                <th>
+
+                    Fallecidos
+                </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NOMBRE_DEP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NOMBRE)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CONFIRMADOS)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RECUPERADOS)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FALLECIDOS)
+
+                    <td>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+</div>

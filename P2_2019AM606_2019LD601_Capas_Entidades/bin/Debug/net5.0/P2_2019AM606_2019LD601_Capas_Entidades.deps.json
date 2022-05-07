@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "P2_2019AM606_2019LD601_Capas_Entidades/1.0.0": {
+        "runtime": {
+          "P2_2019AM606_2019LD601_Capas_Entidades.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "P2_2019AM606_2019LD601_Capas_Entidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

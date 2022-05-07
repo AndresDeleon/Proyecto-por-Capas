@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\P2_2019AM606_2019LD601_Capas_Servicio\P2_2019AM606_2019LD601_Capas_Servicio.csproj" />
+  </ItemGroup>
+
+</Project>
